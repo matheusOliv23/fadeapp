@@ -1,15 +1,20 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
+import { TestimonialCardProps } from 'components/TestimonialCard'
 
 import { Slider } from '.'
 
-const { getByRole } = screen
+const data: TestimonialCardProps[] = [
+  {
+    name: 'John Doe',
+    message: 'Loren ipsum dolor',
+    image: 'http://cdn.com/photo-name.jpg',
+  },
+]
 
 describe('<Slider />', () => {
-  it('should render the heading', () => {
-    render(<Slider />)
+  it('should snapshot', () => {
+    const { container } = render(<Slider data={data} />)
 
-    const heading = getByRole('heading', { name: 'Slider' })
-
-    expect(heading).toBeInTheDocument()
+    expect(container).toMatchSnapshot()
   })
 })

@@ -1,63 +1,62 @@
-import { ReactNode, useState } from 'react'
+import {
+  TestimonialCard,
+  TestimonialCardProps,
+} from 'components/TestimonialCard'
+import Image from 'next/image'
+import { useState } from 'react'
 import SliderItem from './SliderItem'
-import { Carousel, CarouselInner, CarouselItem } from './styles'
-
-interface ISlider {
-  title: string
-}
+import { Carousel } from './styles'
 
 interface SliderProps {
-  sliders?: ISlider[]
-  interval?: number
-  indicators?: boolean
-  autoPlay?: boolean
-  width?: number | string
-  children: ReactNode
+  data: TestimonialCardProps[]
 }
 
-export const Slider = ({ width = '100%', children, sliders }: SliderProps) => {
+export const Slider = ({ data }: SliderProps) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0)
 
-  const switchIndex = (index: any) => {
-    setCurrentSlide(index)
-  }
+  // const switchIndex = (index: any) => {
+  //   setCurrentSlide(index)
+  // }
 
   const next = () => {
-    const index = currentSlide < sliders.length - 1 ? currentSlide + 1 : 0
-    //const index = currentSlide > 0 ? currentSlide - 1 : slides.length - 1
+    const index = currentSlide < data.length - 1 ? currentSlide + 1 : 0
+
     setCurrentSlide(index)
   }
 
   return (
-    <div className="gap-70 flex">
-      <div onClick={next} className="flex cursor-pointer">
-        <img
+    <div className="flex">
+      <div onClick={next} className=" hidden cursor-pointer md:flex">
+        <Image
           className="text-zinc-500 opacity-[0.6]"
           src="/Vector2.svg"
-          style={{ marginRight: -15 }}
           width={42}
           height={82}
-          alt=""
+          alt="Seta maior"
         />
-        <img
+        <Image
           width={28}
           height={57}
-          style={{ marginRight: 15 }}
           className="text-zinc-500 opacity-[0.6] "
           src="/Vector.svg"
-          alt=""
+          alt="Seta menor"
         />
       </div>
-      <div className={Carousel} onMouseOver={switchIndex}>
-        <div className=" w-[1200px] whitespace-nowrap border-2 bg-[#212948]">
+      <div className={Carousel}>
+        <div className="m-0 mr-[4rem] md:mr-0 w-full whitespace-nowrap p-[2rem] md:p-[2rem]">
           <div
             onMouseDown={next}
-            className="ease w-80 transition"
-            style={{ transform: `translateX(${-currentSlide * 80}%)` }}
+            className="ease w-full  transition"
+            style={{ transform: `translateX(${-currentSlide * 110}%)` }}
           >
-            {sliders?.map((slide, index) => (
+            {data?.map((slide, index) => (
               <SliderItem slider={slide} key={index}>
-                {children}
+                <TestimonialCard
+                  name={slide.name}
+                  message={slide.message}
+                  image={slide.image}
+                  key={index}
+                />
               </SliderItem>
             ))}
           </div>

@@ -1,8 +1,10 @@
 export const Carousel = `
  overflow-hidden
- max-w-4xl
+ max-w-[1200px]
  flex
  justify-around
+ bg-[#212948]
+ 
 `
 
 export const CarouselInner = `

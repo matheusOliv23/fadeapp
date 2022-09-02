@@ -1,7 +1,9 @@
 import React, { ReactNode } from 'react'
 
 interface ISlider {
-  title: string
+  name: string
+  message: string
+  image: string | StaticImageData
 }
 
 interface SliderProps {
@@ -10,11 +12,5 @@ interface SliderProps {
 }
 
 export default function SliderItem({ children }: SliderProps) {
-  return (
-    <div className=" inline-block h-full w-[25rem] p-[2rem]  ">
-      <div className="column flex min-h-[30vh] flex-col items-center bg-cyan-500  p-[2rem]">
-        {children}
-      </div>
-    </div>
-  )
+  return <div className=" inline-block h-full">{children}</div>
 }
