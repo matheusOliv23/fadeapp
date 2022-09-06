@@ -1,6 +1,5 @@
 import { render } from '@testing-library/react'
 import { TestimonialCardProps } from 'components/TestimonialCard'
-
 import { Slider } from '.'
 
 const data: TestimonialCardProps[] = [

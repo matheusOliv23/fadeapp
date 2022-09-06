@@ -5,7 +5,13 @@ import {
 import Image from 'next/image'
 import { useState } from 'react'
 import SliderItem from './SliderItem'
-import { Carousel } from './styles'
+import {
+  ArrowContainer,
+  Carousel,
+  CarouselContainer,
+  CarouselItem,
+  CarouselSlide,
+} from './styles'
 
 interface SliderProps {
   data: TestimonialCardProps[]
@@ -14,10 +20,6 @@ interface SliderProps {
 export const Slider = ({ data }: SliderProps) => {
   const [currentSlide, setCurrentSlide] = useState<number>(0)
 
-  // const switchIndex = (index: any) => {
-  //   setCurrentSlide(index)
-  // }
-
   const next = () => {
     const index = currentSlide < data.length - 1 ? currentSlide + 1 : 0
 
@@ -25,8 +27,8 @@ export const Slider = ({ data }: SliderProps) => {
   }
 
   return (
-    <div className="flex">
-      <div onClick={next} className=" hidden cursor-pointer md:flex">
+    <div className={CarouselContainer}>
+      <div onClick={next} className={ArrowContainer}>
         <Image
           className="text-zinc-500 opacity-[0.6]"
           src="/Vector2.svg"
@@ -43,11 +45,11 @@ export const Slider = ({ data }: SliderProps) => {
         />
       </div>
       <div className={Carousel}>
-        <div className="m-0 mr-[4rem] md:mr-0 w-full whitespace-nowrap p-[2rem] md:p-[2rem]">
+        <div className={CarouselItem}>
           <div
             onMouseDown={next}
-            className="ease w-full  transition"
-            style={{ transform: `translateX(${-currentSlide * 110}%)` }}
+            className={CarouselSlide}
+            style={{ transform: `translateX(${-currentSlide * 75}%)` }}
           >
             {data?.map((slide, index) => (
               <SliderItem slider={slide} key={index}>
