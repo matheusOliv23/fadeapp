@@ -21,4 +21,5 @@ Default.args = {
     'Seu treino personalizado, na palma da sua mão, a qualquer hora e lugar.',
   img: '/background.png',
   textButton: 'EU QUERO',
+  minorText: 'Experimente 7 dias Grátis',
 }

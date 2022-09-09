@@ -1,5 +1,5 @@
 export const HeroContainer = `
-  flex h-[100vh] w-full flex-col items-start justify-center p-[2rem] bg-blend-overlay md:p-[9.375rem] bg-no-repeat object-contain
+  flex max-h-[37.5rem] md:h-[48.25rem] w-full flex-col items-start justify-center p-[2rem] bg-blend-overlay md:p-[9.375rem] object-contain
 `
 
 export const TitleContainer = ` 

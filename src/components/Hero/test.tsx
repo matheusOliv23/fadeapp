@@ -8,9 +8,10 @@ const data: HeroProps = {
     'Seu treino personalizado, na palma da sua mão, a qualquer hora e lugar.',
   img: '/background.png',
   textButton: 'EU QUERO',
+  minorText: 'Experimente 7 dias Grátis',
 }
 
-const { getByRole, getByText } = screen
+const { getByRole, getByText, getByTestId } = screen
 
 describe('<Hero />', () => {
   it('should render the hero', () => {
@@ -23,7 +24,7 @@ describe('<Hero />', () => {
       'Seu treino personalizado, na palma da sua mão, a qualquer hora e lugar.',
     )
     const minorText = getByText('Experimente 7 dias Grátis')
-    const image = getByRole('hero', { name: '' })
+    const image = getByTestId('hero')
     const button = getByRole('button', { name: 'EU QUERO' })
     const { container } = render(<Hero {...data} />)
 
@@ -32,7 +33,7 @@ describe('<Hero />', () => {
       'Seu treino personalizado, na palma da sua mão, a qualquer hora e lugar.',
     )
     expect(minorText).toHaveTextContent('Experimente 7 dias Grátis')
-    expect(image).toHaveStyle('background: url(/background.png)')
+    expect(image).toHaveStyle('backgroundImage: url(/background.png)')
     expect(button).toBeInTheDocument()
     expect(container).toMatchSnapshot()
   })
