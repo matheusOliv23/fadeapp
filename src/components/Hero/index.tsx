@@ -33,7 +33,6 @@ export const Hero = ({
         backgroundSize: '100%',
         backgroundRepeat: 'no-repeat',
         objectFit: 'contain',
-        height: '100vh',
       }}
     >
       <div className={TitleContainer}>
