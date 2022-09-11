@@ -1,4 +1,5 @@
 import { Button } from 'components/Button'
+import { Headline } from 'components/Headline'
 import {
   ButtonContainer,
   HeroContainer,
@@ -6,8 +7,6 @@ import {
   TitleContainer,
   Try,
 } from './styles'
-
-
 
 export interface HeroProps {
   subtitle: string
@@ -33,10 +32,12 @@ export const Hero = ({
         backgroundPosition: 'center',
         backgroundSize: '100%',
         backgroundRepeat: 'no-repeat',
+        objectFit: 'contain',
+        height: '100vh',
       }}
     >
       <div className={TitleContainer}>
-        <h2>{headlineTitle}</h2>
+        <Headline position="center" title={headlineTitle} />
         <p className={Subtitle}>{subtitle}</p>
 
         <div className={ButtonContainer}>

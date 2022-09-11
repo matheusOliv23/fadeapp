@@ -1,13 +1,13 @@
 export const HeroContainer = `
-  flex max-h-[37.5rem] md:h-[48.25rem] w-full flex-col items-start justify-center p-[2rem] bg-blend-overlay md:p-[9.375rem] object-contain
+ flex h-[37.5rem] md:h-[48.25rem]p-[1rem] w-full flex-col items-center md:items-start justify-center bg-blend-overlay md:p-[9.375rem] object-contain
 `
 
 export const TitleContainer = ` 
-flex w-[27.75rem] flex-col items-center justify-center md:items-start md:justify-start 
+flex w-[27.75rem] flex-col items-center text-center justify-center md:items-start md:justify-start 
 `
 
 export const Subtitle = `
-  mb-5 text-center text-2xl font-normal text-white md:text-left
+  mb-5 w-[20rem] text-center md:text-2xl text-x1 font-normal text-white md:text-left
 `
 export const ButtonContainer = `
   flex flex-col last:items-center

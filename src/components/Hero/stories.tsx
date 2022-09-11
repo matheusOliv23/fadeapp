@@ -7,7 +7,7 @@ export default {
   parameters: {
     design: {
       type: 'figma',
-      url: 'FIGMA_URL_FRAME',
+      url: 'https://www.figma.com/file/5POR2aLuetESGo24JoLmrn/Fade-App---landing-page?node-id=610%3A143',
     },
   },
 } as ComponentMeta<typeof Hero>
