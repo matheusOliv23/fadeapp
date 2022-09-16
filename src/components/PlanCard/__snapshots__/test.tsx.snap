@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlanCard /> should render by default 1`] = `
+<h3
+  class="
+  gap-2 text-6xl font-medium text-white
+"
+>
+  Semanal
+</h3>
+`;
