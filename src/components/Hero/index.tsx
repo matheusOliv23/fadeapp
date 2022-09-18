@@ -10,7 +10,6 @@ import {
 
 export interface HeroProps {
   subtitle: string
-  img: string
   headlineTitle: string
   textButton: string
   minorText: string
@@ -18,27 +17,15 @@ export interface HeroProps {
 
 export const Hero = ({
   subtitle,
-  img,
   headlineTitle,
   textButton,
   minorText,
 }: HeroProps) => {
   return (
-    <div
-      className={HeroContainer}
-      data-testid="hero"
-      style={{
-        backgroundImage: `url(${img})`,
-        backgroundPosition: 'center',
-        backgroundSize: '100%',
-        backgroundRepeat: 'no-repeat',
-        objectFit: 'contain',
-      }}
-    >
+    <div className={HeroContainer} data-testid="hero">
       <div className={TitleContainer}>
         <Headline position="center" title={headlineTitle} />
         <p className={Subtitle}>{subtitle}</p>
-
         <div className={ButtonContainer}>
           <Button>{textButton}</Button>
           <p className={Try}>{minorText}</p>
