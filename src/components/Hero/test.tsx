@@ -8,6 +8,7 @@ const data: HeroProps = {
     'Seu treino personalizado, na palma da sua mão, a qualquer hora e lugar.',
   textButton: 'EU QUERO',
   minorText: 'Experimente 7 dias Grátis',
+  image: './background.png',
 }
 
 const { getByRole, getByText } = screen
@@ -25,12 +26,14 @@ describe('<Hero />', () => {
     const minorText = getByText('Experimente 7 dias Grátis')
     const button = getByRole('button', { name: 'EU QUERO' })
     const { container } = render(<Hero {...data} />)
+    const image = container.firstChild
 
     expect(hero).toBeInTheDocument()
     expect(subtitle).toHaveTextContent(
       'Seu treino personalizado, na palma da sua mão, a qualquer hora e lugar.',
     )
     expect(minorText).toHaveTextContent('Experimente 7 dias Grátis')
+    expect(image).toHaveStyle('background-image: url(./background.png)')
     expect(button).toBeInTheDocument()
     expect(container).toMatchSnapshot()
   })

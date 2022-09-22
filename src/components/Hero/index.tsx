@@ -13,6 +13,7 @@ export interface HeroProps {
   headlineTitle: string
   textButton: string
   minorText: string
+  image: string
 }
 
 export const Hero = ({
@@ -20,9 +21,10 @@ export const Hero = ({
   headlineTitle,
   textButton,
   minorText,
+  image,
 }: HeroProps) => {
   return (
-    <div className={HeroContainer} data-testid="hero">
+    <div className={HeroContainer} style={{ backgroundImage: `url(${image})` }}>
       <div className={TitleContainer}>
         <Headline position="center" title={headlineTitle} />
         <p className={Subtitle}>{subtitle}</p>
