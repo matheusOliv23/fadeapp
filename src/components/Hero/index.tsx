@@ -1,7 +1,10 @@
 import { Button } from 'components/Button'
 import { Headline } from 'components/Headline'
+
+
 import {
   ButtonContainer,
+  ButtonStyle,
   HeroContainer,
   Subtitle,
   TitleContainer,
@@ -12,25 +15,28 @@ export interface HeroProps {
   subtitle: string
   headlineTitle: string
   textButton: string
-  minorText: string
   image: string
+  tryText: string
 }
 
 export const Hero = ({
   subtitle,
   headlineTitle,
   textButton,
-  minorText,
+  tryText,
   image,
 }: HeroProps) => {
   return (
     <div className={HeroContainer} style={{ backgroundImage: `url(${image})` }}>
       <div className={TitleContainer}>
-        <Headline position="center" title={headlineTitle} />
+        <Headline title={headlineTitle} />
+
         <p className={Subtitle}>{subtitle}</p>
+
         <div className={ButtonContainer}>
-          <Button>{textButton}</Button>
-          <p className={Try}>{minorText}</p>
+          <Button className={ButtonStyle}>{textButton}</Button>
+
+          <p className={Try}>{tryText}</p>
         </div>
       </div>
     </div>

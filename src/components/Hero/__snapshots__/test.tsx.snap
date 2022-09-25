@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Hero /> should render the hero 1`] = `
+exports[`<Hero /> should match snapshot 1`] = `
 <div>
   <div
     class="
- flex h-[37.5rem] md:h-[48.25rem]p-[1rem] w-full flex-col items-center md:items-start object-cover bg-center justify-center bg-no-repeat bg-blend-overlay md:p-[9.375rem]
+flex h-[38rem] md:h-[48.25rem] p-[1rem] w-full flex-col items-center bg-center bg-cover md:items-start justify-center bg-no-repeat bg-blend-overlay md:p-[9.375rem]
 "
-    style="background-image: url(./background.png);"
+    style="background-image: url(http://www.cdn.com/background.png);"
   >
     <div
       class=" 
@@ -17,7 +17,7 @@ flex w-[27.75rem] flex-col items-center text-center md:text-left  justify-center
         class="
 relative flex flex-col text-white  
   min-w-[25.25rem] 
-items-center"
+items-start"
       >
         <h2
           class="
@@ -29,24 +29,26 @@ items-center"
       </div>
       <p
         class="
-  mb-5 md:w-[26rem] w-[20rem] text-center md:text-2xl text-x1 font-normal text-white md:text-left
+mb-5 md:w-[26rem] w-[20rem] text-center md:text-xxl text-x1 font-normal text-gray-300 md:text-left
 "
       >
         Seu treino personalizado, na palma da sua mão, a qualquer hora e lugar.
       </p>
       <div
         class="
-  flex flex-col last:items-center
+ flex flex-col last:items-center w-[18.31rem] md:w-[21.25rem]
 "
       >
         <button
-          class="flex items-center justify-center rounded-10 bg-primary font-bold text-secondary transition hover:text-primary hover:bg-transparent border-2 border-primary transition-color py-4 w-[21.5rem] text-lg h-[3.625rem] "
+          class="flex items-center justify-center rounded-10 bg-primary font-bold text-secondary transition hover:text-primary hover:bg-transparent border-2 border-primary transition-color py-4 w-[21.5rem] text-lg h-[3.625rem] 
+w-[18.31rem] md:w-[21.25rem]
+"
         >
           EU QUERO
         </button>
         <p
           class="
-  mt-2 text-sm text-gray-500
+mt-2 text-sm text-gray-500
 "
         >
           Experimente 7 dias Grátis
