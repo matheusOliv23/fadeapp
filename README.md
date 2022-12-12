@@ -18,6 +18,10 @@ Criar uma landing page para divulgar um app que é seu parceiro durante os exerc
 - Experiência com tecnologias requisitadas pelo mercado
 - Desenvolvimento ágil utilizando o Scrum
 
+##Deploy
+
+- [Link](https://fadeapp.vercel.app/)
+
 ## Demonstração
 ![fadeapp preview](https://user-images.githubusercontent.com/59663666/206880486-98c96e47-8382-42ad-92d7-286fbddf6fbf.gif)
 
